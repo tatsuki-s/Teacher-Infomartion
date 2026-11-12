@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
+</script>
 
 <template>
   <h1>You did it!</h1>
@@ -10,6 +12,8 @@
     >vuejs.org</a> to read the
     documentation
   </p>
+  <RouterView />
+
 </template>
 
 <style scoped></style>
