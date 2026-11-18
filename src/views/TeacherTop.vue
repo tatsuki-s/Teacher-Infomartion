@@ -1,8 +1,8 @@
 <script setup>
 </script>
-
 <template>
-  <main>
-    This is 先生のプロフィール page.
-  </main>
+教員トップページ
 </template>
+<style scoped>
+
+</style>
