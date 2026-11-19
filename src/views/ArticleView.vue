@@ -17,7 +17,7 @@
     </div>
 
     <div class="section">
-      <h2>01　研究</h2>
+      <h2>01 研究</h2>
       <p>研究テーマ</p>
       <p class="blank"></p>
       <p>取り組んでいること・おもしろさ</p>
@@ -25,13 +25,13 @@
     </div>
 
     <div class="section">
-      <h2>02　趣味</h2>
+      <h2>02 趣味</h2>
       <p>好きなこと・休日の過ごし方</p>
       <p class="text"></p>
     </div>
 
     <div class="message">
-      <h2>03　本人から</h2>
+      <h2>03 本人から</h2>
       <p class="text"></p>
     </div>
 
