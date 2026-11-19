@@ -28,7 +28,7 @@
         <div class="sidebar-block">
           <article class="related-article">
             <h3 class="article-title">
-              <a href="#">※これらのコメントはすべて<br>　実在しない人物のものです<br></a>
+              <a href="#">※これらのコメントはすべて<br>  実在しない人物のものです<br></a>
             </h3>
           </article>
         </div>
