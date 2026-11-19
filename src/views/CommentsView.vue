@@ -1,47 +1,21 @@
 <script setup> </script>
 <template>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>みんなの声 | 余白 YOHAKU</title>
-  <!-- Google Fonts: 游明朝やヒラギノ明朝に近いWebフォントとしてShippori MinchoとNoto Sans JPを読み込み -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
+
 <body>
 
-  <!-- ヘッダー -->
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="#" class="site-logo">
-        <span class="logo-main">余白</span>
-        <span class="logo-sub">YOHAKU</span>
-      </a>
-      <nav class="site-nav">
-        <ul>
-          <li><a href="#">読みもの</a></li>
-          <li><a href="#">私たちについて</a></li>
-          <li><a href="#" class="is-active">みんなの声</a></li>
-        </ul>
-      </nav>
-      <p class="header-tagline">暮らしに、ひと呼吸。</p>
-    </div>
-  </header>
 
   <!-- メインコンテンツ -->
   <main class="main-container">
     
     <!-- ページタイトルエリア -->
     <section class="page-header">
-      <p class="breadcrumb">JOURNAL / READERS' VOICES</p>
+      <p class="breadcrumb">教員研究所</p>
       <div class="title-wrapper">
-        <h1 class="page-title">みんなの声</h1>
+        <h1 class="page-title">各所からのコメント</h1>
         <span class="badge-count">06</span>
       </div>
       <p class="page-lead">
-        ひとつの読みものから、いくつもの気づき。<br>
+        当サイトの教員紹介について、<br>
         読者のみなさんから届いた言葉をご紹介します。
       </p>
     </section>
@@ -52,24 +26,18 @@
       <!-- 左サイドバー -->
       <aside class="sidebar">
         <div class="sidebar-block">
-          <h2 class="sidebar-heading">言葉が生まれた読みもの</h2>
           <article class="related-article">
-            <p class="article-category">ESSAY &nbsp;/&nbsp; 07</p>
             <h3 class="article-title">
-              <a href="#">何もしない時間が、<br>毎日を少し豊かにする。</a>
+              <a href="#">※これらのコメントはすべて<br>　実在しない人物のものです<br></a>
             </h3>
-            <p class="article-excerpt">
-              忙しさの隙間に見つけた、<br>
-              自分のペースを取り戻すヒント。
-            </p>
-            <p class="article-meta">2025.05.18 &nbsp;·&nbsp; 5 min read</p>
           </article>
         </div>
 
         <div class="sidebar-block">
-          <h2 class="sidebar-heading">ひとこと、編集部から</h2>
+          <h2 class="sidebar-heading">ひとこと、編集者から</h2>
           <p class="editorial-note">
-            同じ記事を読んでも、心に残るところは人それぞれ。その違いも、楽しんでいただけたらうれしいです。
+           この部分が余って何を書くか迷ったので、編集者からのひとことを入れておきます。<br>
+           <br><br><br><br><br><br><br><br><br>うんち★
           </p>
         </div>
       </aside>
@@ -89,7 +57,7 @@
             <div class="comment-body">
               <div class="comment-meta">
                 <div class="user-info">
-                  <span class="user-name">haru</span>
+                  <span class="user-name"></span>
                   <span class="user-handle">@haru_days</span>
                 </div>
                 <time class="comment-date">2025.05.24</time>
