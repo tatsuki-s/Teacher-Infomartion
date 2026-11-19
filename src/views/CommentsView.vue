@@ -1,11 +1,10 @@
 <script setup> </script>
 <template>
 
-<body>
 
 
   <!-- メインコンテンツ -->
-  <main class="main-container">
+  <div class="main-container">
     
     <!-- ページタイトルエリア -->
     <section class="page-header">
@@ -210,17 +209,8 @@
 
       </section>
     </div>
-  </main>
+</div>
 
-  <!-- フッター -->
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p class="footer-brand">余白 &nbsp;/&nbsp; 暮らしに、ひと呼吸。</p>
-      <p class="copyright">&copy; 2025 YOHAKU JOURNAL</p>
-    </div>
-  </footer>
-
-</body>
 </template>
 <style scoped>
 /* =========================================
