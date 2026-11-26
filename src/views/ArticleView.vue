@@ -1,21 +1,5 @@
 <template>
   <div class="page">
-    <p class="small">PEOPLE / 人を知る</p>
-    <h1>教員</h1>
-
-    <div class="profile">
-      <div class="info">
-        <h2>教員</h2>
-        <p>名前</p>
-        <p class="blank"></p>
-        <p>担当教科</p>
-        <p class="blank"></p>
-        <p>ひとこと紹介</p>
-        <p class="blank"></p>
-      </div>
-      <div class="photo">写真</div>
-    </div>
-
     <div class="section">
       <h2>01 研究</h2>
       <p>研究テーマ</p>
