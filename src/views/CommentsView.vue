@@ -1,4 +1,56 @@
-<script setup> </script>
+
+<script setup>
+const comments = [
+  {
+    name: "haru",
+    handle: "@haru_days",
+    date: "2025.05.24",
+    text: "何もしない時間にも、ちゃんと意味があるんですね。\n休日まで予定で埋めていた自分に、少し立ち止まるきっかけをくれました。\n今週末はコーヒーを淹れて、ただ窓の外を眺めてみようと思います。",
+    avatar: "https://placehold.co/80x80/d8d5cc/555555?text=haru",
+    likes: 24
+  },
+  {
+    name: "山本 しおり",
+    handle: "@shiori_y",
+    date: "2025.05.23",
+    text: "「余白をつくる」という考え方が好きです。\n何かを足すのではなく、引いてみる。暮らしだけでなく、仕事にも通じる気がしました。何度も読み返したくなる記事でした。",
+    avatar: "https://placehold.co/80x80/e2dcd0/555555?text=shiori",
+    likes: 18
+  },
+  {
+    name: "mori",
+    handle: "@mori_to_asa",
+    date: "2025.05.22",
+    text: "朝の10分を、自分のために。\n記事を読んでから、起きてすぐスマホを見るのをやめてみました。\nそれだけなのに、一日のはじまりが少し穏やかになりました。",
+    avatar: "https://placehold.co/80x80/cdd6cd/555555?text=mori",
+    likes: 32
+  },
+  {
+    name: "たなか",
+    handle: "@tanaka_",
+    date: "2025.05.21",
+    text: "頑張らない日があってもいい。\nそんなふうに言ってもらえた気がして、肩の力が抜けました。\nやさしい言葉をありがとうございます。",
+    avatar: "https://placehold.co/80x80/e5d8c5/555555?text=tanaka",
+    likes: 12
+  },
+  {
+    name: "natsumi",
+    handle: "@natsu_walk",
+    date: "2025.05.20",
+    text: "散歩の途中に、いつもと違う道へ。\n目的を決めずに歩いたら、近所に小さな花屋さんを見つけました。\n余白があると、見える景色も変わるんですね。",
+    avatar: "https://placehold.co/80x80/d5dcd0/555555?text=natsumi",
+    likes: 21
+  },
+  {
+    name: "小林 ゆう",
+    handle: "@yu_kobayashi",
+    date: "2025.05.19",
+    text: "忙しい友人にも、そっと届けたい記事。\n「休むこと」と「立ち止まること」は違うのかもしれない。\n読み終わったあとも、そんなことをゆっくり考えています。",
+    avatar: "https://placehold.co/80x80/cfd5c9/555555?text=yu",
+    likes: 9
+  }
+]
+</script>
 <template>
 
 
@@ -49,153 +101,32 @@
         </div>
 
         <div class="comments-list">
-          
-          <!-- コメントカード 1 -->
-          <article class="comment-card">
-            <img src="https://placehold.co/80x80/d8d5cc/555555?text=haru" alt="haru" class="user-avatar">
-            <div class="comment-body">
-              <div class="comment-meta">
-                <div class="user-info">
-                  <span class="user-name"></span>
-                  <span class="user-handle">@haru_days</span>
-                </div>
-                <time class="comment-date">2025.05.24</time>
-              </div>
-              <p class="comment-text">
-                何もしない時間にも、ちゃんと意味があるんですね。<br>
-                休日まで予定で埋めていた自分に、少し立ち止まるきっかけをくれました。<br>
-                今週末はコーヒーを淹れて、ただ窓の外を眺めてみようと思います。
-              </p>
-              <button type="button" class="like-button" aria-label="いいね">
-                <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-                <span>24</span>
-              </button>
-            </div>
-          </article>
 
-          <!-- コメントカード 2 -->
-          <article class="comment-card">
-            <img src="https://placehold.co/80x80/e2dcd0/555555?text=shiori" alt="山本 しおり" class="user-avatar">
+          <!-- v-forでコメントを繰り返し表示 -->
+          <article
+            class="comment-card"
+            v-for="comment in comments"
+            :key="comment.handle"
+          >
+            <img
+              :src="comment.avatar"
+              :alt="comment.name"
+              class="user-avatar"
+            >
             <div class="comment-body">
               <div class="comment-meta">
                 <div class="user-info">
-                  <span class="user-name">山本 しおり</span>
-                  <span class="user-handle">@shiori_y</span>
+                  <span class="user-name">{{ comment.name }}</span>
+                  <span class="user-handle">{{ comment.handle }}</span>
                 </div>
-                <time class="comment-date">2025.05.23</time>
+                <time class="comment-date">{{ comment.date }}</time>
               </div>
-              <p class="comment-text">
-                「余白をつくる」という考え方が好きです。<br>
-                何かを足すのではなく、引いてみる。暮らしだけでなく、仕事にも<br>
-                通じる気がしました。何度も読み返したくなる記事でした。
-              </p>
+              <p class="comment-text">{{ comment.text }}</p>
               <button type="button" class="like-button" aria-label="いいね">
                 <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
-                <span>18</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- コメントカード 3 -->
-          <article class="comment-card">
-            <img src="https://placehold.co/80x80/cdd6cd/555555?text=mori" alt="mori" class="user-avatar">
-            <div class="comment-body">
-              <div class="comment-meta">
-                <div class="user-info">
-                  <span class="user-name">mori</span>
-                  <span class="user-handle">@mori_to_asa</span>
-                </div>
-                <time class="comment-date">2025.05.22</time>
-              </div>
-              <p class="comment-text">
-                朝の10分を、自分のために。<br>
-                記事を読んでから、起きてすぐスマホを見るのをやめてみました。<br>
-                それだけなのに、一日のはじまりが少し穏やかになりました。
-              </p>
-              <button type="button" class="like-button" aria-label="いいね">
-                <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-                <span>32</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- コメントカード 4 -->
-          <article class="comment-card">
-            <img src="https://placehold.co/80x80/e5d8c5/555555?text=tanaka" alt="たなか" class="user-avatar">
-            <div class="comment-body">
-              <div class="comment-meta">
-                <div class="user-info">
-                  <span class="user-name">たなか</span>
-                  <span class="user-handle">@tanaka_</span>
-                </div>
-                <time class="comment-date">2025.05.21</time>
-              </div>
-              <p class="comment-text">
-                頑張らない日があってもいい。<br>
-                そんなふうに言ってもらえた気がして、肩の力が抜けました。<br>
-                やさしい言葉をありがとうございます。
-              </p>
-              <button type="button" class="like-button" aria-label="いいね">
-                <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-                <span>12</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- コメントカード 5 -->
-          <article class="comment-card">
-            <img src="https://placehold.co/80x80/d5dcd0/555555?text=natsumi" alt="natsumi" class="user-avatar">
-            <div class="comment-body">
-              <div class="comment-meta">
-                <div class="user-info">
-                  <span class="user-name">natsumi</span>
-                  <span class="user-handle">@natsu_walk</span>
-                </div>
-                <time class="comment-date">2025.05.20</time>
-              </div>
-              <p class="comment-text">
-                散歩の途中に、いつもと違う道へ。<br>
-                目的を決めずに歩いたら、近所に小さな花屋さんを見つけました。<br>
-                余白があると、見える景色も変わるんですね。
-              </p>
-              <button type="button" class="like-button" aria-label="いいね">
-                <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-                <span>21</span>
-              </button>
-            </div>
-          </article>
-
-          <!-- コメントカード 6 -->
-          <article class="comment-card">
-            <img src="https://placehold.co/80x80/cfd5c9/555555?text=yu" alt="小林 ゆう" class="user-avatar">
-            <div class="comment-body">
-              <div class="comment-meta">
-                <div class="user-info">
-                  <span class="user-name">小林 ゆう</span>
-                  <span class="user-handle">@yu_kobayashi</span>
-                </div>
-                <time class="comment-date">2025.05.19</time>
-              </div>
-              <p class="comment-text">
-                忙しい友人にも、そっと届けたい記事。<br>
-                「休むこと」と「立ち止まること」は違うのかもしれない。<br>
-                読み終わったあとも、そんなことをゆっくり考えています。
-              </p>
-              <button type="button" class="like-button" aria-label="いいね">
-                <svg class="heart-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                </svg>
-                <span>9</span>
+                <span>{{ comment.likes }}</span>
               </button>
             </div>
           </article>
@@ -521,6 +452,7 @@ ul {
 }
 
 .comment-text {
+  white-space: pre-line;
   font-size: 14px;
   color: var(--text-main);
   line-height: 1.95;
